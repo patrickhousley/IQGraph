@@ -1,0 +1,210 @@
+bl 98
+AxesOn
+""->{Y1}
+""->{Y2}
+GraphStyle(1,1)
+ClrHome
+GraphStyle(2,1)
+Menu("   FORM MENU    ","Y?AX^^2+BX+C",S,"Y?A(X+B)^^2+C",T,"EXIT",Z
+Lbl Z
+Stop
+Lbl T
+Goto 99
+End
+Lbl S
+Disp "Y?AX^^2+BX+C"
+Prompt A,B,C
+Menu("   INEQUALITY    ",">",D,">=",E,"<",F,"<=",G,"=",H
+Lbl D
+GraphStyle(1,7)
+Goto 47
+End
+Lbl F
+GraphStyle(1,7)
+Goto 49
+End
+Lbl E
+GraphStyle(1,1)
+Goto 48
+End
+Lbl G
+GraphStyle(1,1)
+Goto 50
+End
+Lbl H
+GraphStyle(1,1)
+GraphStyle(2,1)
+Goto 51
+End
+Lbl 47
+If 9999999>A(9999999)^^2+B(9999999)+C
+Then
+	Goto 53
+	Else
+	Goto 54
+End
+Lbl 48
+If 9999999>=A(9999999)^^2+B(9999999)+C
+Then
+	Goto 53
+	Else
+	Goto 54
+End
+Lbl 49
+If 9999999<A(9999999)^^2+B(9999999)+C
+Then
+	Goto 53
+	Else
+	Goto 54
+End
+Lbl 50
+If 9999999<=A(9999999)^^2+B(9999999)+C
+Then
+	Goto 53
+	Else
+	Goto 54
+End
+Lbl 51
+"AX^^2+BX+C"->{Y1}
+"AX^^2+BX+C"->{Y2}
+Goto 90
+End
+Lbl 53
+If A>=.1
+Then
+	GraphStyle(2,4)
+	"AX^^2+BX+C"->{Y1}
+	"AX^^2+BX+C"->{Y2}
+	Goto 90
+	Else
+	If A<=~.1
+	Then
+		GraphStyle(2,3)
+		"AX^^2+BX+C"->{Y1}
+		"AX^^2+BX+C"->{Y2}
+		Goto 90
+	End
+	Lbl 54
+	If A>=.1
+	Then
+		GraphStyle(2,3)
+		"AX^^2+BX+C"->{Y1}
+		"AX^^2+BX+C"->{Y2}
+		Goto 90
+		Else
+		If A<=~.1
+		Then
+			GraphStyle(2,4)
+			"AX^^2+BX+C"->{Y1}
+			"AX^^2+BX+C"->{Y2}
+			Goto 90
+		End
+		Lbl 90
+		DispGraph
+		Pause 
+		ClrHome
+		""->{Y1}
+		""->{Y2}
+		GraphStyle(1,1)
+		GraphStyle(2,1)
+		ClrHome
+		Goto 98
+		Stop
+		Lbl 99
+		Disp "Y?A(X+B)^^2+C"
+		Prompt A,B,C
+		Menu("   INEQUALITY    ",">",N,">=",O,"<",P,"<=",Q,"=",R
+		Lbl N
+		GraphStyle(1,7)
+		Goto 10
+	End
+	Lbl O
+	GraphStyle(1,1)
+	Goto 11
+End
+Lbl P
+GraphStyle(1,7)
+Goto 12
+End
+Lbl Q
+GraphStyle(1,1)
+Goto 13
+End
+Lbl R
+GraphStyle(1,1)
+GraphStyle(1,1)
+Goto 22
+End
+Lbl 10
+If 999999999>A(999999999+B)^^2+C
+Then
+	Goto 20
+	Else
+	Goto 21
+End
+Lbl 11
+If 999999999>=A(999999999+B)^^2+C
+Then
+	Goto 20
+	Else
+	Goto 21
+End
+Lbl 12
+If 999999999<A(999999999+B)^^2+C
+Then
+	Goto 20
+	Else
+	Goto 21
+End
+Lbl 13
+If 999999999<=A(999999999+B)^^2+C
+Then
+	Goto 20
+	Else
+	Goto 21
+End
+Lbl 20
+If A>=.1
+Then
+	GraphStyle(2,4)
+	"A(X+B)^^2+C"->{Y1}
+	"A(X+B)^^2+C"->{Y2}
+	DispGraph
+	Pause 
+	Goto 98
+	Else
+	If A<=~.1
+	GraphStyle(2,3)
+	"A(X+B)^^2+C"->{Y1}
+	"A(X+B)^^2+C"->{Y2}
+	DispGraph
+	Pause 
+	Goto 98
+End
+Lbl 21
+If A>=.1
+Then
+	GraphStyle(2,3)
+	"A(X+B)^^2+C"->{Y1}
+	"A(X+B)^^2+C"->{Y2}
+	DispGraph
+	Pause 
+	Goto 98
+	Else
+	If A<=~.1
+	Then
+		GraphStyle(2,4)
+		"A(X+B)^^2+C"->{Y1}
+		"A(X+B)^^2+C"->{Y2}
+		DispGraph
+		Pause 
+		Goto 98
+	End
+	Lbl 22
+	"A(X+B)^^2+C"->{Y1}
+	"A(X+B)^^2+C"->{Y2}
+	DispGraph
+	Pause 
+	ClrHome
+	Goto 98
+End

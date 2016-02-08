@@ -12,3 +12,5 @@ The original release of the soure code can be found [here](http://www.ticalc.org
 
 Example Output:
 ![example output](https://github.com/patrickhousley/IQGraph/blob/master/SCREEN01.BMP)
+
+You can use [this](https://www.cemetech.net/sc/) to view and modify the program.
