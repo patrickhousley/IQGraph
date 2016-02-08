@@ -11,6 +11,7 @@ Y = A(x + B)<sup>2</sup> + C
 The original release of the soure code can be found [here](http://www.ticalc.org/archives/files/authors/75/7531.html).
 
 Example Output:
+
 ![example output](https://github.com/patrickhousley/IQGraph/blob/master/SCREEN01.BMP)
 
 You can use [this](https://www.cemetech.net/sc/) to view and modify the program.
